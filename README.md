@@ -27,8 +27,8 @@ ex) git checkout -b apply-feedback
 ### TODO
 1. UI 생성
    - [x] 사용자에게 자동차명들 입력 받음 - **UserInterface.getCarsName()**
-   - [ ] 사용자에게 자동차를 움직일 횟수를 입력 받는다 - **UserInterface.getPlayTurn()**
-   - [ ] 게임 종료 후 우승자 발표 -- **UserInterface.printWinner**
+   - [x] 사용자에게 자동차를 움직일 횟수를 입력 받는다 - **UserInterface.getPlayTurn()**
+   - [x] 게임 종료 후 우승자 발표 -- **UserInterface.printWinner**
     
 2. 입력값 검증 클래스 구현
    - [x] 각 자동차명이 5글자 이하인지 검증한다 - **InputValidations.carNameValidation()**
