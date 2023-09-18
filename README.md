@@ -34,8 +34,8 @@ ex) git checkout -b apply-feedback
    - [x] 각 자동차명이 5글자 이하인지 검증한다 - **InputValidations.carNameValidation()**
     
 3. 사용자 입력에 따라 객체들을 생성한다
-   - [ ] 입력받은 자동차명대로 car를 생성한다
-   - [ ] 자동차의 일급 컬렉션 cars를 생성한다
+   - [x] 입력받은 자동차명대로 car를 생성한다
+   - [x] 자동차의 일급 컬렉션 cars를 생성한다
    
 4. 게임로직을 작성한다
    - [ ] 자동차가 움직일 난수값을 생성한다
