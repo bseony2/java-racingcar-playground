@@ -22,7 +22,7 @@ public class UserInterface {
         return result == null ? new ArrayList<>() : result;
     }
 
-    static int getPlayTurn() {
+    public static int getPlayTurn() {
         int cnt = 0;
         try {
             System.out.println("시도할 회수는 몇회인가요?");
@@ -35,7 +35,7 @@ public class UserInterface {
         return cnt;
     }
 
-    static void printWinner(List<String> winners) {
+    static public void printWinner(List<String> winners) {
         StringBuilder sb = new StringBuilder();
         for(String name : winners) {
             sb.append(name).append(", ");

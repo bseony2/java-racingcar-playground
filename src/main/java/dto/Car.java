@@ -45,4 +45,10 @@ public class Car {
     public int hashCode() {
         return Objects.hash(this.name);
     }
+
+    public void move(int dis) {
+        if(dis >= 4) {
+            this.distance += dis;
+        }
+    }
 }

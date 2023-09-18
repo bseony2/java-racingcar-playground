@@ -1,12 +1,14 @@
 package game;
 
 import dto.Car;
+import dto.Cars;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.*;
 public class CarTest {
@@ -40,6 +42,24 @@ public class CarTest {
         car.setDistance(5);
         car.printDistance();
         assertThat(getOutput()).isEqualTo("Test : -----");
+    }
+
+    @Test
+    void moveTest() {
+        String[] names = new String[]{"a", "b", "c", "d"};
+        Cars cars = new Cars(Arrays.asList(names));
+
+        int dis = 2;
+        for(Car car : cars) {
+            car.move(dis);
+            if(dis < 4) {
+                assertThat(car.getDistance()).isEqualTo(0);
+            }
+            else if(dis >= 4) {
+                assertThat(car.getDistance()).isEqualTo(dis);
+            }
+            dis += 1;
+        }
     }
 
     String getOutput() {
