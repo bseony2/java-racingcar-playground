@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Cars implements Iterable<Car>{
-    List<Car> cars;
+    private List<Car> cars;
     static final int MAX_DIS = 9;
 
     public Cars(List<String> cars) {
