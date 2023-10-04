@@ -30,4 +30,12 @@ class PositionTest {
         Car car1 = new Car("배선영", 7);
         assertThat("배선영 : -------").isEqualTo(car1.getCarPosition());
     }
+
+    @Test
+    @DisplayName("Position 값 1 증가")
+    void addDistanceTest() {
+        Position position = new Position(4);
+        position.move();
+        assertThat("-----").isEqualTo(position.getPosition());
+    }
 }

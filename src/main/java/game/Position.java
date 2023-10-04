@@ -1,7 +1,7 @@
 package game;
 
 public class Position {
-    private final int position;
+    private int position;
     private static final int INIT_POSITION = 0;
 
     public Position() {
@@ -18,5 +18,9 @@ public class Position {
             result.append('-');
         }
         return result.toString();
+    }
+
+    public void move() {
+        this.position += 1;
     }
 }

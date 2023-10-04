@@ -1,5 +1,7 @@
 package game;
 
+import utils.MovingStrategy;
+
 public class Car {
     private final Name name;
     private final Position position;
@@ -19,5 +21,9 @@ public class Car {
 
     public String getCarPosition() {
         return getCarName() + " : " + this.position.getPosition();
+    }
+
+    public void move(MovingStrategy movingStrategy) {
+        if(movingStrategy.movable()) this.position.move();
     }
 }
