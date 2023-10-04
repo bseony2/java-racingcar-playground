@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class RacingGame {
+public class RacingMain {
     static Scanner sc = new Scanner(System.in);
     static final String SPLITTER_FLAG = ",";
     static Cars racingCars;
