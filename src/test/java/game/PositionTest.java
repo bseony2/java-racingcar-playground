@@ -11,24 +11,24 @@ class PositionTest {
     @DisplayName("초기 거리는 0임")
     void initialPositionIsZero() {
         Position position = new Position();
-        assertThat("").isEqualTo(position.getPosition());
+        assertThat(0).isEqualTo(position.getPosition());
     }
 
     @Test
     @DisplayName("position의 크기만큼 - 반환")
     void printDistance() {
         Position position = new Position(4);
-        assertThat("----").isEqualTo(position.getPosition());
+        assertThat("----").isEqualTo(position.printPosition());
     }
 
     @Test
     @DisplayName("전진하는 자동차 출력")
     void getCarPositionTest() {
         Car car = new Car("car", 4);
-        assertThat("car : ----").isEqualTo(car.getCarPosition());
+        assertThat("car : ----").isEqualTo(car.printCarPosition());
 
         Car car1 = new Car("배선영", 7);
-        assertThat("배선영 : -------").isEqualTo(car1.getCarPosition());
+        assertThat("배선영 : -------").isEqualTo(car1.printCarPosition());
     }
 
     @Test
@@ -36,6 +36,6 @@ class PositionTest {
     void addDistanceTest() {
         Position position = new Position(4);
         position.move();
-        assertThat("-----").isEqualTo(position.getPosition());
+        assertThat("-----").isEqualTo(position.printPosition());
     }
 }

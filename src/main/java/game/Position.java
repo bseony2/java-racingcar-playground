@@ -12,12 +12,16 @@ public class Position {
         this.position = position;
     }
 
-    public String getPosition() {
+    public String printPosition() {
         StringBuilder result = new StringBuilder();
         for(int i=0; i<this.position; i++) {
             result.append('-');
         }
         return result.toString();
+    }
+
+    public int getPosition() {
+        return this.position;
     }
 
     public void move() {

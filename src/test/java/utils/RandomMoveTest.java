@@ -13,7 +13,7 @@ class RandomMoveTest {
     void carMove() {
         Car car = new Car("test", 2);
         car.move(() -> true);
-        assertThat("---").isEqualTo(car.getCarPosition());
+        assertThat("---").isEqualTo(car.printCarPosition());
     }
 
     @Test
@@ -21,6 +21,6 @@ class RandomMoveTest {
     void carDontMove() {
         Car car = new Car("test", 2);
         car.move(() -> false);
-        assertThat("--").isEqualTo(car.getCarPosition());
+        assertThat("--").isEqualTo(car.printCarPosition());
     }
 }
