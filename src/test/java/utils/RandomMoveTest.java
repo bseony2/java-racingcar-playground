@@ -12,7 +12,7 @@ class RandomMoveTest {
     @DisplayName("차량 전진")
     void carMove() {
         Car car = new Car("test", 2);
-        car.move(() -> true);
+        car.move(true);
         assertThat("---").isEqualTo(car.printCarPosition());
     }
 
@@ -20,7 +20,7 @@ class RandomMoveTest {
     @DisplayName("차량 전진")
     void carDontMove() {
         Car car = new Car("test", 2);
-        car.move(() -> false);
+        car.move(false);
         assertThat("--").isEqualTo(car.printCarPosition());
     }
 }

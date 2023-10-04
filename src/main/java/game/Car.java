@@ -1,7 +1,5 @@
 package game;
 
-import utils.MovingStrategy;
-
 import java.util.Objects;
 
 public class Car {
@@ -29,8 +27,8 @@ public class Car {
         return position.getPosition();
     }
 
-    public void move(MovingStrategy movingStrategy) {
-        if(movingStrategy.movable()) this.position.move();
+    public void move(boolean movable) {
+        if(movable) this.position.move();
     }
 
     @Override

@@ -1,5 +1,7 @@
 package game;
 
+import utils.RandomMove;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +19,20 @@ public class Cars {
                     .collect(Collectors.toList());
     }
 
+    public void printCarPosition() {
+        for(Car car : cars) {
+            System.out.println(car.printCarPosition());
+        }
+    }
+
     private int getMaxDistance() {
         return cars.stream().mapToInt(Car::getCarPosition).max().orElse(0);
+    }
+
+    public void move() {
+        RandomMove randomMove = new RandomMove();
+        for(Car car : cars) {
+            car.move(randomMove.movable());
+        }
     }
 }
